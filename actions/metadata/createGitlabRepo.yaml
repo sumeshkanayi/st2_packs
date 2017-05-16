@@ -1,6 +1,6 @@
 ---
 name: createGitlabRepo
-runner_type: run-python
+runner_type: python-script
 description: "Create a Git Lab Repository"
 enabled: true
 entry_point: "scripts/python/createGitlabRepo.py"
