@@ -1,0 +1,22 @@
+---
+name: createGitlabRepo
+runner_type: run-python
+description: "Create a Git Lab Repository"
+enabled: true
+entry_point: "scripts/python/createGitlabRepo.py"
+parameters:
+    projectName:
+        type: string
+        description: "Name of project"
+        required: true
+    description:
+        type: string
+        description: "Enter description of your project"
+        required: true
+    groupId:
+        type: string
+        description: "Enter group id here"
+        required: true
+
+
+
