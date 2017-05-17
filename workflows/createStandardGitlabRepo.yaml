@@ -1,0 +1,44 @@
+version: "2.0"
+devops.createPipeline:
+ description: "This will create a DevOps pipeline"
+ input:
+     - description
+     - projectFacing
+     - projectCategory
+     - componentName
+     - API
+
+ tasks:
+     GenerateNamingConvention:
+       action:
+         st2_packs.generateGitlaRepositoryName projectCategory="<% $.projectCategory %>" projectFacing="<% $.projectFacing %>" projectCategory="<% $.projectCategory %>" componentName="<% $.componentName %>" API="<% $.API %>" description="<% $.description %>"
+       publish:
+         NewprojectName: "<% task(GenerateNamingConvention).result.result.projectName %>"
+       on-success:
+         - CreateGitLabGroup
+     CreateGitLabGroup:
+       action:
+          st2_packs.createGitlabGroup GroupName="<%$.projectCategory%>"
+       publish:
+           groupId: "<% task(createGitLabGroup).result.result.GroupId %>"
+       on-success:
+         - checkIfGitlabRepoExists
+
+     checkIfGitlabRepoExists:
+       action:
+          st2_packs.checkGitlabRepoExistsOrNot projectName="<% $.NewprojectName %>"
+       publish:
+          DoesGitRepoexist: "<% task(checkIfGitlabRepoExists).result.result.RepositoryExistence %>"
+       on-success:
+          - createGitlabRepo: <% $.DoesGitRepoexist = "no" %>
+          - GitlabRepoExists: <% $.DoesGitRepoexist = "yes" %>
+     createGitlabRepo:
+       action:
+             st2_packs.createGitlabRepo projectName="<% $.NewprojectName %>" Description="<% $.description %>" groupId="<%$.groupId%>"
+       publish:
+           sshRepositoryUrl: "<% task(createGitlabRepo).result.result.RepositoryUrl %>"
+     GitlabRepoExists:
+       action:
+          core.local cmd='echo "Git repo exists"'
+
+
