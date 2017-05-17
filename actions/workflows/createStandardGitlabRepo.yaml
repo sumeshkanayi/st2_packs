@@ -34,11 +34,12 @@ st2_packs.createGitlabRepoWithTheCorrectNamingConvention:
           - GitlabRepoExists: <% $.DoesGitRepoexist = "yes" %>
      createGitlabRepo:
        action:
-             st2_packs.createGitlabRepo projectName="<% $.NewprojectName %>" Description="<% $.description %>" groupId="<%$.groupId%>"
+             st2_packs.createGitlabRepo projectName="<% $.NewprojectName %>" description="<% $.description %>" groupId="<%$.groupId%>"
        publish:
            sshRepositoryUrl: "<% task(createGitlabRepo).result.result.RepositoryUrl %>"
      GitlabRepoExists:
        action:
           core.local cmd='echo "Git repo exists"'
+
 
 
