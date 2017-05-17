@@ -12,6 +12,7 @@ class checkGitlabRepository(Action):
         connectGitLab.auth()
         self.logger.info(connectGitLab.auth())
         getAllGitLabProjects=connectGitLab.projects.list()
+        print getAllGitLabProjects
         getAllGitLabProjectNames=[]
         for gitLabProject in getAllGitLabProjects:
             getAllGitLabProjectNames.append(gitLabProject.name)
