@@ -1,5 +1,5 @@
 ---
-name: devops
+name: st2_packs
 description: Pack for all DevOps automation
 version: 0.1.0
 author : devops team
