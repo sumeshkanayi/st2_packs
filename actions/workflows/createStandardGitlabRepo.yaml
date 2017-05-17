@@ -11,7 +11,7 @@ st2_packs.createGitlabRepoWithTheCorrectNamingConvention:
  tasks:
      GenerateNamingConvention:
        action:
-         st2_packs.generateGitlaRepositoryName projectCategory="<% $.projectCategory %>" projectFacing="<% $.projectFacing %>" projectCategory="<% $.projectCategory %>" componentName="<% $.componentName %>" API="<% $.API %>" description="<% $.description %>"
+         st2_packs.generateGitlabRepositoryName projectCategory="<% $.projectCategory %>" projectFacing="<% $.projectFacing %>" projectCategory="<% $.projectCategory %>" componentName="<% $.componentName %>" API="<% $.API %>" description="<% $.description %>"
        publish:
          NewprojectName: "<% task(GenerateNamingConvention).result.result.projectName %>"
        on-success:
