@@ -9,7 +9,7 @@ class createGitlabRepository(Action):
         connectGitLab = gitlab.Gitlab(gitLabUrl,gitLabPrivateToken,ssl_verify=False)
         self.logger.info('Connecting to GitLab')
         connectGitLab.auth()
-        self.logger.info(connectGitLab.auth()
+        self.logger.info(connectGitLab.auth())
         gitLabRepoCreationStatus=connectGitLab.projects.create({'name': projectName, 'default_branch': 'master', 'wiki_enabled': 1, 'namespace_id': groupId})
         self.logger.info('Created repo')
         self.logger.info(gitLabRepoCreationStatus)
