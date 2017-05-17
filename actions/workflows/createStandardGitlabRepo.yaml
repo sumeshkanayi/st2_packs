@@ -1,5 +1,5 @@
 version: "2.0"
-st2_packs.createGitlabRepositoryWithCorrectNamingConventionWorkflow:
+st2_packs.createGitlabRepoWithTheCorrectNamingConvention:
  description: "This will create a gitlab repo with correct naming convention etc"
  input:
      - description
