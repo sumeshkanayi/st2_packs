@@ -1,4 +1,4 @@
-name: Check_Gitlab_Repo
+name: checkGitlabRepoExistsOrNot
 runner_type: "python-script"
 description: "Chef if a git Lab repository exists or not"
 enabled: true
