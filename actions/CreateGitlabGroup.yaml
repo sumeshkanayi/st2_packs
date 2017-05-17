@@ -1,0 +1,10 @@
+name: createGitlabGroup
+runner_type: python-script
+description: "Create Git Lab Group"
+enabled: true
+entry_point: "scripts/python/createGitLabGroup.py"
+parameters:
+    GroupName:
+        type: string
+        description: "Name of Group"
+        required: true
