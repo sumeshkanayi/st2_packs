@@ -1,0 +1,29 @@
+name: createGitlabRepoWithTheCorrectNamingConvention
+runner_type: mistral-v2
+description: "Test workflow"
+enabled: true
+entry_point: "workflows/createStandardGitlabRepo.yaml"
+parameters:
+    description:
+        type: string
+        description: "Input2"
+        required: true
+    projectCategory:
+        type: string
+        description: "peoject Category"
+        required: true
+    componentName:
+        type: string
+        description: "Name of component"
+        required: true
+    API:
+        type: string
+        description: "scala or java"
+        required: false
+    projectFacing:
+        type: string
+        description: "Internal facing or external facing"
+        required: true
+        default: "internal"
+
+

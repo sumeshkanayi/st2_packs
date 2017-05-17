@@ -1,6 +1,6 @@
 version: "2.0"
-devops.createPipeline:
- description: "This will create a DevOps pipeline"
+st2_packs.createGitlabRepositoryWithCorrectNamingConventionWorkflow:
+ description: "This will create a gitlab repo with correct naming convention etc"
  input:
      - description
      - projectFacing
