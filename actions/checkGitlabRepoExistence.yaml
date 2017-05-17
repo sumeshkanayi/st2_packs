@@ -1,0 +1,10 @@
+name: Check_Gitlab_Repo
+runner_type: run-python
+description: "Chef if a git Lab repository exists or not"
+enabled: true
+entry_point: "scripts/checkGitlabRepoExistence.py"
+parameters:
+    projectName:
+        type: string
+        description: "Name of Project"
+        required: true
