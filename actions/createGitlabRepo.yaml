@@ -14,7 +14,7 @@ parameters:
         description: "Enter description of your project"
         required: true
     groupId:
-        type: string
+        type: integer
         description: "Enter group id here"
         required: true
 
