@@ -1,8 +1,8 @@
 name: Check_Gitlab_Repo
-runner_type: run-python
+runner_type: "python-script"
 description: "Chef if a git Lab repository exists or not"
 enabled: true
-entry_point: "scripts/checkGitlabRepoExistence.py"
+entry_point: "scripts/python/checkGitlabRepoExistence.py"
 parameters:
     projectName:
         type: string
