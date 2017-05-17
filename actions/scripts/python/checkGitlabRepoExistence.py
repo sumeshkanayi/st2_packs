@@ -16,6 +16,7 @@ class checkGitlabRepository(Action):
         getAllGitLabProjectNames=[]
         for gitLabProject in getAllGitLabProjects:
             getAllGitLabProjectNames.append(gitLabProject.name)
+            print gitLabProject.name
             if projectName in getAllGitLabProjectNames:
                 self.logger.error("Repo exists")
                 return {"RepositoryExistence": "yes"}
