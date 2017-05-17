@@ -4,6 +4,7 @@ import gitlab
 class checkGitlabRepository(Action):
     def run(self,projectName):
     #Will create a Gitlab repository .Add a README.MD file with default contents and will create Master and Developmnt branches
+        repositoryExistenceFlag=0
         gitLabUrl=self.config["gitLabUrl"]
         gitLabUserName=self.config["gitLabUsername"]
         gitLabPrivateToken=self.config["gitLabPrivateToken"]
@@ -19,9 +20,12 @@ class checkGitlabRepository(Action):
             print gitLabProject.name
             if projectName in getAllGitLabProjectNames:
                 self.logger.error("Repo exists")
+                repositoryExistenceFlag=1
                 return {"RepositoryExistence": "yes"}
             else:
-                return {"RepositoryExistence": "no"}
+                continue
+        if repositoryExistenceFlag != 1:
+            return {"RepositoryExistence": "no"}
 
 
 
