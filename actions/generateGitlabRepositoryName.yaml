@@ -1,0 +1,30 @@
+---
+name: 'generateGitlabRepositoryName'
+runner_type: 'python-script'
+description: "Generate repository names as per QI naming convention"
+enabled: true
+entry_point: "scripts/python/generateNamingConvention.py"
+parameters:
+    projectCategory:
+        type: string
+        description: "Project category - eg: BDF"
+        required: true
+    description:
+        type: string
+        description: "Description of project"
+        required: true
+    API:
+        type: string
+        description: "Enter API name if there are any (Optional)"
+        required: false
+    componentName:
+        type: string
+        description: "Name of the project component"
+        required: true
+    projectFacing:
+        type: string
+        description: Is your project internal facing or external facing"
+        required: true
+
+
+
