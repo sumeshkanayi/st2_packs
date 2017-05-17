@@ -6,7 +6,7 @@ entry_point: "workflows/createStandardGitlabRepo.yaml"
 parameters:
     description:
         type: string
-        description: "Input2"
+        description: "Description of your project"
         required: true
     projectCategory:
         type: string
@@ -18,7 +18,7 @@ parameters:
         required: true
     API:
         type: string
-        description: "scala or java"
+        description: "Name of API "
         required: false
     projectFacing:
         type: string
