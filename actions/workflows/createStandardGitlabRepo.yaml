@@ -20,7 +20,7 @@ st2_packs.createGitlabRepoWithTheCorrectNamingConvention:
        action:
           st2_packs.createGitlabGroup GroupName="<%$.projectCategory%>"
        publish:
-           groupId: "<% task(createGitLabGroup).result.result.groupId %>"
+           groupId: "<% task(createGitLabGroup).result.result.GroupId %>"
        on-success:
          - checkIfGitlabRepoExists
 
