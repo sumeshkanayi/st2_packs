@@ -46,6 +46,6 @@ st2_packs.createGitlabRepoWithTheCorrectNamingConvention:
           core.local cmd='echo "Git repo exists"'
      addWebhookToRepository:
         action:
-           st2_packs.addWebHookToAgitLabProject projectId="<%$.repositoryId%>" url="http://www.google.com"
+           st2_packs.addWebHookToAgitLabProject projectId="<%$.repositoryId%>" webHookUrl="http://www.google.com"
 
 
