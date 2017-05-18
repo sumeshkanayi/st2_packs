@@ -1,6 +1,6 @@
 name: createGitlabRepoWithTheCorrectNamingConvention
 runner_type: mistral-v2
-description: "Test workflow"
+description: "Mistral work flow to generate a gitlab repo"
 enabled: true
 entry_point: "workflows/createStandardGitlabRepo.yaml"
 parameters:
@@ -10,15 +10,15 @@ parameters:
         required: true
     projectCategory:
         type: string
-        description: "peoject Category"
+        description: "project Category : eg: BDF"
         required: true
     componentName:
         type: string
-        description: "Name of component"
+        description: "Name of component : eg: DT1"
         required: true
     API:
         type: string
-        description: "Name of API "
+        description: "Name of API :eg:  "
         required: false
     projectFacing:
         type: string

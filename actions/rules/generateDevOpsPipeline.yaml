@@ -1,0 +1,24 @@
+---
+description: 'Create a Devops pipeline from scratch'
+tags: []
+type:
+  ref: standard
+  parameters:
+enabled: true
+name: generateDevOpsPipeline
+trigger:
+  ref: core.37efb113-8739-4068-b480-90f9a76c3a1a
+  type: core.st2.webhook
+  parameters:
+    url: devops
+criteria:
+action:
+  ref: st2_packs.createGitlabRepoWithTheCorrectNamingConvention
+  parameters:
+    projectFacing: '{{trigger.body.projectFacing}}'
+    componentName: '{{trigger.body.component}}'
+    API: '{{trigger.body.api}}'
+    projectCategory: '{{trigger.body.projectCategory}}'
+    description: '{{trigger.body.description}}'
+pack: st2_packs
+ref: st2_packs.generateDevOpsPipeline

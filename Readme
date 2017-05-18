@@ -1,0 +1,16 @@
+st2 apikey create -k -m '{"used_by": "devops"}
+
+Key:
+MjAyM2I2ZTQzZDUzYmM3NjgyOGQ4MDlkOTlhYTMyZTVlMWY1MjRjNWE3NmYyY2FkYzBlZWVlNDI0NDk3MzQxNg
+
+
+Generate key:
+
+st2 auth -t -p st2admin Just4DevoPS
+
+
+create repo from using curl ,triggering a rule
+
+
+curl -k https://ec2-54-255-192-184.ap-southeast-1.compute.amazonaws.com/api/v1/webhooks/devops -H "X-Auth-Token:4d2ef7624d444551a06bf7be4134b40f" -H "Content-Type: application/json" -d "@repositoryInput.json" -X POST
+
