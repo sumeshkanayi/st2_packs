@@ -1,0 +1,5 @@
+- Confirm what are the integrations required since gitlab can talk to jenkins directly and to jira do we need it? still we can send
+payload
+- Do we need to clone a repo from exisitng project (boiler plate) and add to the new gitlab repos
+- How to generate jenkins jobs
+-

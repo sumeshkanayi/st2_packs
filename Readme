@@ -14,3 +14,4 @@ create repo from using curl ,triggering a rule
 
 curl -k https://ec2-54-255-192-184.ap-southeast-1.compute.amazonaws.com/api/v1/webhooks/devops -H "X-Auth-Token:4d2ef7624d444551a06bf7be4134b40f" -H "Content-Type: application/json" -d "@repositoryInput.json" -X POST
 
+
