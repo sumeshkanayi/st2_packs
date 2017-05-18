@@ -8,7 +8,7 @@ class checkGitlabRepository(Action):
         gitLabUrl=self.config["gitLabUrl"]
         gitLabUserName=self.config["gitLabUsername"]
         gitLabPrivateToken=self.config["gitLabPrivateToken"]
-        connectGitLab = actions.scripts.python.gitlab.Gitlab(gitLabUrl, gitLabPrivateToken, ssl_verify=False)
+        connectGitLab = gitlab.Gitlab(gitLabUrl, gitLabPrivateToken, ssl_verify=False)
         self.logger.info('Connecting to GitLab')
         connectGitLab.auth()
         self.logger.info(connectGitLab.auth())
