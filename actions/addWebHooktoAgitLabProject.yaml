@@ -3,7 +3,7 @@ name: 'addWebHookToAgitLabProject'
 runner_type: 'python-script'
 description: "Add a webhook to a project"
 enabled: true
-entry_point: "scripts/python/addWebHookToAgitLabProject.py"
+entry_point: "scripts/python/gitlab/addWebHookToAgitLabProject.py"
 parameters:
     projectId:
         type: integer

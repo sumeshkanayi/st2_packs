@@ -2,7 +2,7 @@ name: createGitlabGroup
 runner_type: python-script
 description: "Create Git Lab Group"
 enabled: true
-entry_point: "scripts/python/createGitLabGroup.py"
+entry_point: "scripts/python/gitlab/createGitLabGroup.py"
 parameters:
     GroupName:
         type: string

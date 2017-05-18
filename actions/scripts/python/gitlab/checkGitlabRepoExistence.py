@@ -1,5 +1,5 @@
 from st2actions.runners.pythonrunner import Action
-import gitlab
+import actions.scripts.python.gitlab
 
 class checkGitlabRepository(Action):
     def run(self,projectName):
@@ -8,7 +8,7 @@ class checkGitlabRepository(Action):
         gitLabUrl=self.config["gitLabUrl"]
         gitLabUserName=self.config["gitLabUsername"]
         gitLabPrivateToken=self.config["gitLabPrivateToken"]
-        connectGitLab = gitlab.Gitlab(gitLabUrl,gitLabPrivateToken,ssl_verify=False)
+        connectGitLab = actions.scripts.python.gitlab.Gitlab(gitLabUrl, gitLabPrivateToken, ssl_verify=False)
         self.logger.info('Connecting to GitLab')
         connectGitLab.auth()
         self.logger.info(connectGitLab.auth())

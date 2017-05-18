@@ -3,7 +3,7 @@ name: 'createGitlabRepo'
 runner_type: 'python-script'
 description: "Create a Git Lab Repository"
 enabled: true
-entry_point: "scripts/python/createGitlabRepo.py"
+entry_point: "scripts/python/gitlab/createGitlabRepo.py"
 parameters:
     projectName:
         type: string

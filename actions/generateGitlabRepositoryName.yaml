@@ -3,7 +3,7 @@ name: 'generateGitlabRepositoryName'
 runner_type: 'python-script'
 description: "Generate repository names as per QI naming convention"
 enabled: true
-entry_point: "scripts/python/generateNamingConvention.py"
+entry_point: "scripts/python/gitlab/generateNamingConvention.py"
 parameters:
     projectCategory:
         type: string
