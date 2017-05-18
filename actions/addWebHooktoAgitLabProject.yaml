@@ -1,5 +1,5 @@
 ---
-name: 'addWebHookToaProject'
+name: 'addWebHookToAgitLabProject'
 runner_type: 'python-script'
 description: "Add a webhook to a project"
 enabled: true
