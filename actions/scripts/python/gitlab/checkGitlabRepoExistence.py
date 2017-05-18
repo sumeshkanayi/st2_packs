@@ -1,5 +1,5 @@
 from st2actions.runners.pythonrunner import Action
-import actions.scripts.python.gitlab
+import gitlab
 
 class checkGitlabRepository(Action):
     def run(self,projectName):

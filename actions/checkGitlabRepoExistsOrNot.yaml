@@ -3,6 +3,7 @@ runner_type: "python-script"
 description: "Check if a git Lab repository exists or not"
 enabled: true
 entry_point: "scripts/python/gitlab/checkGitlabRepoExistence.py"
+
 parameters:
     projectName:
         type: string
