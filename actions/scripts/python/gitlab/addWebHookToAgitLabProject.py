@@ -1,12 +1,12 @@
 from st2actions.runners.pythonrunner import Action
-import actions.scripts.python.gitlab
+import gitlab
 
 class createGitlabRepository(Action):
     def run(self,projectId,webHookUrl):
         gitLabUrl=self.config["gitLabUrl"]
         gitLabUserName=self.config["gitLabUsername"]
         gitLabPrivateToken=self.config["gitLabPrivateToken"]
-        connectGitLab = actions.scripts.python.gitlab.Gitlab(gitLabUrl, gitLabPrivateToken, ssl_verify=False)
+        connectGitLab = gitlab.Gitlab(gitLabUrl, gitLabPrivateToken, ssl_verify=False)
         self.logger.info('Connecting to GitLab')
         connectGitLab.auth()
         self.logger.info(connectGitLab.auth())
