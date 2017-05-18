@@ -39,12 +39,12 @@ st2_packs.createGitlabRepoWithTheCorrectNamingConvention:
            sshRepositoryUrl: "<% task(createGitlabRepo).result.result.RepositoryUrl %>"
            repositoryId: "<% task(createGitlabRepo).result.result.gitlabProjectId %>"
        on-success:
-            - "Add Webhook to repository"
+            - addWebhookToRepository
 
      GitlabRepoExists:
        action:
           core.local cmd='echo "Git repo exists"'
-     "Add Webhook to repository":
+     addWebhookToRepository:
         action:
            st2_packs.addWebHookToAgitLabProject projectId="<%$.repositoryId%>" url="http://www.google.com"
 
