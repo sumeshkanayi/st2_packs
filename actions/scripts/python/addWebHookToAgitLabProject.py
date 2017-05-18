@@ -10,7 +10,7 @@ class createGitlabRepository(Action):
         self.logger.info('Connecting to GitLab')
         connectGitLab.auth()
         self.logger.info(connectGitLab.auth())
-        gitLabwebHookCreationStatus=connectGitLab.project_hooks.create({'url': webHookUrl,'push_events': 1},project_id=projectId)
+        gitLabwebHookCreationStatus=connectGitLab.project_hooks.create({'url': webHookUrl,'push_events': 1, 'enable_ssl_verification': 0},project_id=projectId)
 
 
 
