@@ -1,3 +1,13 @@
+
+Pre requisites:
+
+
+
+st2 pack.install jenkins
+
+
+
+
 st2 apikey create -k -m '{"used_by": "devops"}
 
 Key:
