@@ -1,5 +1,4 @@
 ---
-gitLabUrl: https://gitlab-dcos.rxcorp.com
-gitLabUsername: stackstorm
-gitLabPassword: ""
-gitLabPrivateToken: RQCDvxtA2z7y4wsW5Xsv
+gitLabUrl: http://172.31.28.235:9080
+gitLabUsername: root
+gitLabPrivateToken: jhKaQj4eDKy4Huyy2S5M
